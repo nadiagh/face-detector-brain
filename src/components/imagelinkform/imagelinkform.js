@@ -8,7 +8,7 @@ const Imagelinkform = ({change,submit,user})=>{
 
     return(
     	<div>
-    	<p className="f3">{user.name},This magic will detect your face 
+    	<p className="f3">{user.name},This magic will detect human faces  
     	</p>
     	<div className="center">
     	<div className="form center pa4 br3 shadow-2 ">
