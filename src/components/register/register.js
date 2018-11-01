@@ -63,7 +63,7 @@ return(
 
 
 <article className="br3 ba  b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
-  <form>
+  <main className="pa4 black-80">
     <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
        <legend className="f1 fw6 ph0 mh0">Sign Up</legend>
       <div className="mt3">
@@ -86,7 +86,7 @@ return(
       <a href="#" className="f6  dim black db" onClick={()=>this.props.onchange("signin")}>You have an account!! Sign In</a>
       
     </div>
-  </form>
+  </main>
 </article>
 
 

@@ -65,8 +65,8 @@ return(
 
 <article className="br3 ba  b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
 
-	<main className="pa4 black-80">
-  <form target="uploader_iframe">
+   <main className="pa4 black-80" target="uploader_iframe">
+ 
     <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
       <legend className="f1 fw6 ph0 mh0">Sign In</legend>
       <div className="mt3">
@@ -86,14 +86,14 @@ return(
      <a href="#" className="f6  dim black db" onClick={()=>this.props.onchange("register")}>Register</a>
       
     </div>
-  </form>
+  
   <iframe id="uploader_iframe" name="uploader_iframe" style={{display: "none"}}></iframe>
 </main>
 
 </article>
 
 
-	);
+  );
 
 
 }
