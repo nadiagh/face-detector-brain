@@ -30,7 +30,7 @@ particles: {
 const initialState={
     input:'',
     url:'',
-    box:{},
+    box:[],
     route:"signin",
     user:{},
 }
@@ -63,23 +63,30 @@ if (route==="signin")
 
 boxPosition=(response)=>{
 
-
  
- const data=response.outputs[0].data.regions[0].region_info.bounding_box;
- const img=document.getElementById('im');
- const bottom= img.height- data.bottom_row * img.height;
- const right=img.width-data.right_col * img.width;
- const top=data.top_row * img.height;
- const left=data.left_col * img.width;
+ 
+ let pos=[];
+
+const img=document.getElementById('im');
+
+ for(let i=0;i<response.outputs[0].data.regions.length;i++)
+ {
+    const data=response.outputs[0].data.regions[i].region_info.bounding_box;
+    const bottom= img.height- data.bottom_row * img.height;
+    const right=img.width-data.right_col * img.width;
+    const top=data.top_row * img.height;
+    const left=data.left_col * img.width;
+    pos.push({bottom:bottom,right:right,top:top,left:left});
+ }
+ 
+ 
    
 
 
 
- this.setState({box:{bottom:bottom,right:right,top:top,left:left}});
+ this.setState({box:pos});
 
 
-
-console.log(data);
 
 }
 

@@ -16,11 +16,13 @@ const Facerecognition = ({src,box})=>{
         
         <img id="im"  alt="" src={src}  height='auto' width='500px'/> 
          
-
-         <div className='bounding-box' 
-         style={{top:`${box.top}px`, right: `${box.right}px`, bottom: `${box.bottom}px`, left: `${box.left}px`}}>
-         </div>
-
+       
+        {box.map((e,i) => <div key={i} className='bounding-box' 
+                        style={{top:`${e.top}px`, right: `${e.right}px`, bottom: `${e.bottom}px`, left: `${e.left}px`}}>
+                      </div>
+         )
+        }
+        
 
         </div>
 
@@ -33,7 +35,7 @@ const Facerecognition = ({src,box})=>{
 
 
 
-	);
+  );
 
     
 
